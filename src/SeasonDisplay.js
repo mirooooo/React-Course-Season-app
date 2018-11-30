@@ -10,9 +10,15 @@ const getSeason = (lat, month) => {
 
 const SeasonDisplay = props => {
   const season = getSeason(props.lat, new Date().getMonth());
-
-  console.log(season);
-  return <div>Season Display</div>;
+  //   Ternaty Expretion
+  const text =
+    season === "winter" ? "Burr, it is chilly" : "Lets Hit The Beach";
+  // ====================================
+  return (
+    <div>
+      <h1> {text} </h1>
+    </div>
+  );
 };
 
 export default SeasonDisplay;
